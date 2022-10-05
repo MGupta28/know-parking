@@ -1,0 +1,35 @@
+<launch>
+
+	<arg name="xb_pos" default="-3.4"/>
+  	<arg name="yb_pos" default="6.4"/>
+
+	<arg name="xm_pos" default="-2.0"/>
+  	<arg name="ym_pos" default="11.0"/>
+  	<arg name="zm_pos" default="0.2"/>
+
+	<!-- <param command="$(find xacro)/xacro $(find parking_barrier_description)/urdf/parking_barrier.xacro" name="robot_description"/> -->
+
+	<!-- <group ns="mr_robot">
+  		<param command="$(find xacro)/xacro $(find mr_robot_description)/urdf/mr_robot.xacro" name="mr_robot"/>
+  		<node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model mr_robot -x $(arg xm_pos) -y $(arg ym_pos) -z $(arg zm_pos)  -param mr_robot" />
+	</group> -->
+
+	<!-- <group ns="parking_barrier"> -->
+	<!-- </group> -->
+
+	<include file="$(find gazebo_ros)/launch/empty_world.launch">
+		<arg name="world_name" value="$(find parking_sim)/worlds/parking_space.world"/>
+		<arg name="paused" value="false"/>
+		<arg name="use_sim_time" value="true"/>
+		<arg name="gui" value="true"/>
+		<arg name="headless" value="false"/>
+		<arg name="debug" value="false"/>
+	</include>
+
+	<!-- <include file="$(find parking_barrier_description)/launch/display.launch" />
+	<include file="$(find parking_barrier_description)/launch/controller.launch" />
+
+	<include file="$(find parking_detector)/launch/parking_detector.launch" /> -->
+	<!-- <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model parking_barrier -x $(arg xb_pos) -y $(arg yb_pos) -param robot_description" /> -->
+
+</launch>

@@ -1,0 +1,47 @@
+<?xml version ="1.0"?>
+<sdf version="1.6">
+  <model name="parking_space">
+    <pose>-3.14159265359 4 0  1.57079632679 0 0</pose>
+    <static>true</static>
+    <link name="barrier0">
+      <collision name="colision1">
+        <geometry>
+          <mesh>
+            <uri>model://barrier/meshes/barrier0.dae</uri>
+          </mesh> 
+        </geometry>
+      </collision>
+
+      <visual name="visual1">
+        <cast_shadows>true</cast_shadows>
+        <geometry>
+          <mesh>
+            <uri>model://barrier/meshes/barrier0.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+
+    </link>
+
+    <link name="barrier1">
+      <collision name="colision2">
+        <geometry>
+          <mesh>
+            <uri>model://barrier/meshes/barrier1.dae</uri>
+          </mesh> 
+        </geometry>
+      </collision>
+
+      <visual name="visual2">
+        <cast_shadows>true</cast_shadows>
+        <geometry>
+          <mesh>
+            <uri>model://barrier/meshes/barrier1.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+
+    </link>
+
+  </model>
+</sdf>
